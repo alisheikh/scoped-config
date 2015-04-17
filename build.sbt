@@ -6,13 +6,17 @@ ReleaseKeys.publishArtifactsAction := PgpKeys.publishSigned.value
 name := "scoped-config"
 organization := "com.gilt"
 
+scalaVersion := "2.11.6"
 scalacOptions ++= Seq(
   "-language:postfixOps",
   "-feature",
   "-unchecked"
 )
 
-libraryDependencies += "com.typesafe" % "config" % "1.2.1"
+libraryDependencies ++= Seq(
+  "com.typesafe" % "config" % "1.2.1",
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.1.0"
+)
 
 homepage := Some(url("https://github.com/gilt/scoped-config"))
 
