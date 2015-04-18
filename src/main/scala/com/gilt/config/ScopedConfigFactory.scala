@@ -14,12 +14,16 @@ object ScopedConfigFactory extends LazyLogging {
     logger.info(s"Loading config scoped to [$scope]")
 
     val defaultConfig = ConfigFactory.load()
-    Try {
-      defaultConfig.getConfig(scope)
-    } match {
-      case Failure(ex: ConfigException.Missing) => defaultConfig
-      case Failure(ex) => throw ex
-      case Success(environmentConfig) => environmentConfig.withFallback(defaultConfig)
+    val result = Try {
+      if (Option(scope).forall(_.isEmpty)) {
+        defaultConfig
+      } else {
+        defaultConfig.getConfig(scope).withFallback(defaultConfig)
+      }
+    } recover {
+      case e: ConfigException.Missing => defaultConfig
     }
+
+    result.get
   }
 }
