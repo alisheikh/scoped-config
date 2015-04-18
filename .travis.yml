@@ -8,4 +8,4 @@ cache:
   directories:
   - "$HOME/.ivy2"
 
-script: sbt scripted
+script: sbt test
