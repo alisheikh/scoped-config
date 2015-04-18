@@ -1,6 +1,8 @@
 # scoped-config
 This provides helper code for getting scoped configs for a production environment.
 
+[![Build Status](https://travis-ci.org/gilt/scoped-config.svg)](https://travis-ci.org/gilt/scoped-config)
+
 [typesafehub/config](https://github.com/typesafehub/config) provides a very flexible config library, but it may be flexible to a fault in that it's not clear on how to just setup a simple configuration that has scoped overrides for production values. This library tries to fill that gap.
 
 # Installation
