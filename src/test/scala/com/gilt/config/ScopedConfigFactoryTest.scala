@@ -1,4 +1,4 @@
-package com.gilt.job.alipay.config
+package com.gilt.config
 
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers

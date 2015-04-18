@@ -1,4 +1,4 @@
-package com.gilt.job.alipay.config
+package com.gilt.config
 
 import scala.util.Failure
 import scala.util.Success
