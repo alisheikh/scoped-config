@@ -21,7 +21,7 @@ libraryDependencies ++= Seq(
 
 homepage := Some(url("https://github.com/gilt/scoped-config"))
 
-licenses := Seq("MIT" -> url("https://raw.githubusercontent.com/gilt/scoped-config/master/LICENSE"))
+licenses := Seq("MIT" -> url("http://www.opensource.org/licenses/mit-license.php"))
 
 publishTo := Some {
   val nexus = "https://oss.sonatype.org/"
